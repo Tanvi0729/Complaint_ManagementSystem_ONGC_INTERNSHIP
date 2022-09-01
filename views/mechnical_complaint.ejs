@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <title>Mechincal complaint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function textCounter(field, countfield, maxlimit) {
+            if (field.value.length > maxlimit) {
+                field.value = field.value.substring(0, maxlimit);
+                field.blur();
+                field.focus();
+                return false;
+            } else {
+                countfield.value = maxlimit - field.value.length;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="registration-form">
+
+        <table width="100%">
+            <tr>
+                <td style="width: 20%;">
+                    <img src="/images/ongc_logo.png" class="rounded float-start" alt="ONGC Logo" height="100" />
+                </td>
+                <td style="vertical-align: bottom; width: 20%;">
+                    <h3>Entry Form</h3>
+                </td>
+                <td style="vertical-align: top; width: 60%; ">
+                    <h2>Mechnical Complaint</h1>
+                </td>
+            </tr>
+        </table>
+
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label>Complaint Date</label>
+                    </td>
+                    <td>
+                        <input type="date" id="colFormLabel" placeholder="DATE">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Time</label>
+                    </td>
+                    <td>
+                        <input type="time" id="colFormLabel" placeholder="TIME">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>CPF No.</label>
+                    </td>
+                    <td>
+                        <input type="text" id="colFormLabel" placeholder="CPF NO">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="colFormLabel" placeholder="NAME">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Designation</label>
+                    </td>
+                    <td>
+                        <input type="text" id="colFormLabel" placeholder="DESIGNATION">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Place (Office/Colony)</label>
+                    </td>
+                    <td>
+                        <select id="place" name="place">
+                            <option value="selectplace">-SELECT-</option>
+                            <option value="office">Office</option>
+                            <option value="colony">Residencial Colony</option>
+                        </select>
+                        <label>(For All A/C Complaint Kindly Select Residential
+                            colony Option)</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Address/Location</label>
+                    </td>
+                    <td>
+                        <textarea class="form-control" name="AddressTextArea">
+                        </textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Contact No. (O)</label>
+                    </td>
+                    <td>
+                        <input type="tel" placeholder="">
+                        <label for="input">(4digit EPABX)</label>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label>(R)</label>
+                    </td>
+                    <td>
+                        <input type="tel" placeholder="">
+                        <label for="input">(4digit EPABX)</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>(M)</label>
+                    </td>
+                    <td>
+                        <input type="tel" placeholder="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Complaint Category</label>
+                    </td>
+                    <td>
+                        <select id="civil" name="civil">
+                            <option value="selectcomplaint">-SELECT-</option>
+                            <option value="pc">Fault in motor</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Nature of Complaint</label>
+                    </td>
+
+                    <td>
+                        <label for="input">[Maximum 300 characters allowed in the field]</label><br><br>
+                        <textarea class="form-control" onblur="textCounter(this,this.form.counter,300);" onkeypress="textCounter(this,this.form.counter,300);" name="message">
+                        </textarea><br>
+                        <input onblur="textCounter(this.form.recipients,this,300);" disabled onfocus="this.blur();" tabindex="999" maxlength="3" size="3" value="300" name="counter">
+                        <label>Characters left</label>
+                    </td>
+                </tr>
+
+            </table>
+
+            <br><br>
+
+            <div style="text-align: center;">
+                <input type="submit" value="Submit">&emsp;&emsp;
+                <input type="submit" value="Cancel">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

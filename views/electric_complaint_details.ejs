@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <%- include('./partials/head'); %>
+        <script>
+            function textCounter(field, countfield, maxlimit) {
+                if (field.value.length > maxlimit) {
+                    field.value = field.value.substring(0, maxlimit);
+                    field.blur();
+                    field.focus();
+                    return false;
+                } else {
+                    countfield.value = maxlimit - field.value.length;
+                }
+            }
+        </script>
+</head>
+
+<body>
+    <div class="registration-form">
+        <%- include('./partials/header'); %>
+
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label>Complaint Date</label>
+                        </td>
+                        <td>
+                            <input type="date" id="colFormLabel" placeholder="DATE" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Time</label>
+                        </td>
+                        <td>
+                            <input type="time" id="colFormLabel" placeholder="TIME" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>CPF No.</label>
+                        </td>
+                        <td>
+                            <input type="text" id="colFormLabel" placeholder="CPF NO" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Name</label>
+                        </td>
+                        <td>
+                            <input type="text" id="colFormLabel" placeholder="NAME" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Designation</label>
+                        </td>
+                        <td>
+                            <input type="text" id="colFormLabel" placeholder="DESIGNATION" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Place (Office/Colony)</label>
+                        </td>
+                        <td>
+                            <select id="place" name="place">
+                <option value="selectplace">-SELECT-</option>
+                <option value="office">Office</option>
+                <option value="colony">Residencial Colony</option>
+            </select>
+                            <label>(For All A/C Complaint Kindly Select Residential colony
+                Option)</label
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label>Address/Location</label>
+                        </td>
+                        <td>
+                            <textarea class="form-control" name="AddressTextArea"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Contact No. (O)</label>
+                        </td>
+                        <td>
+                            <input type="tel" placeholder="" />
+                            <label for="input">(4digit EPABX)</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>(R)</label>
+                        </td>
+                        <td>
+                            <input type="tel" placeholder="" />
+                            <label for="input">(4digit EPABX)</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>(M)</label>
+                        </td>
+                        <td>
+                            <input type="tel" placeholder="" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Complaint Category</label>
+                        </td>
+                        <td>
+                            <select id="electric" name="electric">
+                            <option value="selectcomplaint">-SELECT-</option>
+                            <option value="lfcr">Light/Fan/Call Bell/Regulator</option>
+                            <option value="switches">Switches</option>
+                            <option value="ssf">Short Circuit/Sparking/Fire</option>
+                            <option value="nosupply">No supply</option>
+                            <option value="leakage">Leakage of current</option>
+                            <option value="wp">Wiring for AC/Plug point</option>
+                            <option value="lift">Lift</option>
+                            <option value="fridge">Fridge at Office</option>
+                            <option value="watercooler">Water Cooler</option>
+                            <option value="waterdispenser">Water Dispenser</option>
+                            <option value="splitac">Split AC</option>
+                            <option value="windowac">Window AC</option>
+                            <option value="streetlight">Street Lights</option>
+                            <option value="others">Others</option>
+                        </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Nature of Complaint</label>
+                        </td>
+
+                        <td>
+                            <label for="input">[Maximum 300 characters allowed in the field]</label
+              ><br /><br />
+              <textarea
+                class="form-control"
+                onblur="textCounter(this,this.form.counter,300);"
+                onkeypress="textCounter(this,this.form.counter,300);"
+                name="message"
+              ></textarea
+              ><br />
+              <input
+                onblur="textCounter(this.form.recipients,this,300);"
+                disabled
+                onfocus="this.blur();"
+                tabindex="999"
+                maxlength="3"
+                size="3"
+                value="300"
+                name="counter"
+              />
+              <label>Characters left</label>
+                        </td>
+                    </tr>
+                </table>
+
+                <br /><br />
+
+                <div style="text-align: center">
+                    <input type="submit" value="Submit" />&emsp;&emsp;
+                    <input type="submit" value="Cancel" />
+                </div>
+            </form>
+    </div>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+</body>
+
+</html>

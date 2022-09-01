@@ -1,0 +1,85 @@
+body {
+    background-color: #dee9ff;
+    /* display: grid;
+    justify-content: center; */
+}
+
+.registration-form {
+    padding: 30px 50px;
+    width: max-content;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=email],
+select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 15%;
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=tel] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    max-width: 80%;
+    min-width: 80%;
+    min-height: 94px;
+    max-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* CSS for White Elevated Form*/
+.registration-form form {
+    margin-top: 50px;
+}
+
+.registration-form form label {
+    font-weight: bold;
+}
+
+
+.registration-form .form-class {
+    padding: 30px 50px;
+    background-color: #dee9ff;
+    /* max-width: max-content; */
+    min-width: 800px;
+    border-radius: 30px;
+}
+
+
+.registration-form .note-mark {
+    background-color: #fdf8e2;
+    font-size: 18px;
+}
+
+ol {
+    list-style-type: lower-roman;
+}

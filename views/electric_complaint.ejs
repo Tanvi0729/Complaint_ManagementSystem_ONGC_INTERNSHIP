@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body>
+    <div class="registration-form">
+
+        <table width="100%">
+            <tr>
+                <td style="width: 20%;">
+                    <img src="/images/ongc_logo.png" class="rounded float-start" alt="ONGC Logo" height="100" />
+                </td>
+                <td style="vertical-align: bottom; width: 20%;">
+                    <h3>Entry Form</h3>
+                </td>
+                <td style="vertical-align: top; width: 60%; ">
+                    <h2>Electric Complaint</h1>
+                </td>
+            </tr>
+        </table>
+
+        <form>
+            <h2 style="text-align: center;"> LOGIN FORM</h2>
+            <br><br>
+            <div>
+                <label>Enter the CPF No.</label>
+                <div>
+                    <input type="text" id="colFormLabel" placeholder="CPF No."><br>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Go!">
+                <small style="font-weight: lighter;">(Enter your CPF No. and click Go! Button)</small>
+            </div>
+        </form>
+
+        <div>
+            <label> Please Note:</label>
+            <br><br>
+            <p>
+                <mark class="note-mark">
+                    If your login is not available please submit your request <mark class="note-mark"
+                        style="color: red;">Sign
+                        up</mark>. Please don't put your Electrical complaints here.
+                </mark>
+                <br><br>
+                <mark class="note-mark">
+                    The Complaint No. generated will be of the format MON/XXX eg. DEC/001.
+                </mark>
+
+                <ol>
+                    <li>
+                        <small>
+                        This system is for faciliation of users.
+                    </small>
+                    </li>
+                </ol>
+
+        </div>
+    </div>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+</body>
+
+</html>
